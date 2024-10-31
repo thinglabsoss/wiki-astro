@@ -1,5 +1,5 @@
-import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import { defineConfig } from 'astro/config';
 
 import tailwind from '@astrojs/tailwind';
 
@@ -16,23 +16,27 @@ export default defineConfig({
       customCss: ['./src/tailwind.css'],
       social: {
         discord: 'https://tl.mt/d',
-        github: 'https://github.com/Car-Thing-Hax-Community',
+        github: 'https://github.com/thinglabsoss',
       },
       sidebar: [
         {
-          label: 'Guides',
+          label: 'First Steps',
           items: [
             // Each item here is one entry in the navigation menu.
             {
-              label: 'Example Guide',
-              slug: 'guides/example',
+              label: 'Setting up',
+              slug: 'first-steps/setup-env',
+            },
+            {
+              label: 'Flashing your Car Thing',
+              slug: 'first-steps/flashing',
             },
           ],
         },
         {
-          label: 'Reference',
+          label: 'Official Apps',
           autogenerate: {
-            directory: 'reference',
+            directory: 'official-apps',
           },
         },
       ],
