@@ -22,7 +22,6 @@ export default defineConfig({
         {
           label: 'First Steps',
           items: [
-            // Each item here is one entry in the navigation menu.
             {
               label: 'Setting up',
               slug: 'first-steps/setup-env',
@@ -37,6 +36,12 @@ export default defineConfig({
           label: 'Official Apps',
           autogenerate: {
             directory: 'official-apps',
+          },
+        },
+        {
+          label: 'Community Apps',
+          autogenerate: {
+            directory: 'community-apps',
           },
         },
       ],

@@ -1,6 +1,5 @@
 ---
-title: Setting up your system
-description: How to setup your system.
+title: DeskThing
 ---
 
 Guides lead a user through a specific task they want to accomplish, often with a sequence of steps.
