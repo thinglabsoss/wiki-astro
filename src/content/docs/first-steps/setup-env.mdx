@@ -3,22 +3,35 @@ title: Setting up your system
 description: How to setup your system.
 ---
 
-import { Aside,
-Icon ,Tabs, TabItem } from '@astrojs/starlight/components';
+import { 
+  Aside, 
+  Steps,
+  Icon,
+  Tabs, 
+  TabItem
+ } from '@astrojs/starlight/components';
 
 
 This page provides step-by-step instructions to set up your system for flashing your Car Thing, from tool preparation to software configuration for a successful process.
 
-## Installing Programs
+## Installing Required Programs
 The flashing process requires some items to be successful
 
 ### Git
 <Tabs syncKey="system">
 
   <TabItem label="Windows" icon='seti:windows'>
-    Install Git on your system if is not available [here](https://git-scm.com/downloads)
+    [Install Git on your system if is not available](https://git-scm.com/downloads)
   </TabItem>
 
+  <TabItem label="macOS" icon='apple'>
+    <Aside type='note'>It already comes pre-installed!</Aside>
+  </TabItem>
+
+
+  <TabItem label="Linux" icon='linux'>
+    <Aside type='note'>It already comes pre-installed!</Aside>
+  </TabItem>
 </Tabs>
 
 
@@ -29,18 +42,18 @@ Python is used to run the Car Thing flasher
 <Tabs syncKey="system">
 
   <TabItem label="Windows" icon='seti:windows'>
-    Download and Install the lasted python version [here](https://www.python.org/downloads/)
+    Download and Install the [lastest python version](https://www.python.org/downloads/)
 
     <Aside>
     Don't forget to check Add Python to PATH option on the installer as menitoned [here](https://docs.python.org/3/using/windows.html#installation-steps)
     </Aside>
   </TabItem>
 
-  <TabItem label="Mac" icon='apple'>
+  <TabItem label="macOS" icon='apple'>
     Install [Homebrew](https://brew.sh/) and python will come along.
 
      <Aside >
-      Homebrew is necessary since the macOS default python installation dosen't work with the installer
+      Homebrew is necessary since the macOSOS default python installation dosen't work with the installer
     </Aside>
   </TabItem>
 
@@ -50,26 +63,65 @@ Python is used to run the Car Thing flasher
 
 </Tabs>
 
+### ADB
+
+To communicate with the Car Thing adb is necessary
+
+<Tabs syncKey="system">
+  <TabItem label="Windows" icon='seti:windows'>
+  <Steps>
+    1. Download the [Android SDK Platform Tools ZIP file for Windows](https://dl.google.com/android/repository/platform-tools-latest-windows.zip)
+  
+    2. Extract the contents of this ZIP file into an easily accessible folder (such as C:\platform-tools).
+
+    3. Add folder to Windows PATH. 
+  </Steps>
+  </TabItem>
+  
+  <TabItem label="macOS" icon='apple'>
+    ```zsh
+    brew install android-platform-tools
+    ```
+  </TabItem>
+
+  <TabItem label="Linux" icon='linux'>
+    With your package manager of choice install the package
+
+    For Debian/Ubuntu based Linux
+    ```
+    android-sdk-platform-tools
+    ```
+
+    For Fedora/SUSE based Linux
+    ```
+    android-tools
+    ```
+  </TabItem>
+</Tabs>
+
 ### Drivers
 
 To recognize the Car Thing is necessary some specific drivers
 
 <Tabs syncKey="system">
   <TabItem label="Windows" icon='seti:windows'>
-    Plug in the USB end of the Car Things USB C cable into the computer, then hold top buttons 1, and 4 and plug in the USB C into the Car Thing, this will put it in USB burning mode.
+  <Steps>
+    1. Plug in the USB end of the Car Things USB C cable into the computer, then hold top buttons 1, and 4 and plug in the USB C into the Car Thing, this will put it in USB burning mode.
 
-    For Windows to recognize the Car Thing you need Zadig, you can get it from [here](https://zadig.akeo.ie). After its installed click options then “list all devices”.
+    2. [Download and Install Zadig](https://zadig.akeo.ie). After its installed click options then “list all devices”.
 
-    ![zadix_options](/src/assets/docs/zadix_ignore.png)
+    3. ![zadix_options](/src/assets/docs/zadix_ignore.png)
 
-    Then change it to “GX-CHIP” and click the little arrows to change it to LibusbK, then click install and wait for it to finish.
+    4. Then change it to “GX-CHIP” and click the little arrows to change it to LibusbK, then click install and wait for it to finish.
 
-    ![zadix_libusbk](/src/assets/docs/zadix_libusbk.png)
+    5. ![zadix_libusbk](/src/assets/docs/zadix_libusbk.png)
 
-    <Aside type='caution'>If this driver won't work try using WinUSB.</Aside>
+    </Steps>
+
+    <Aside type='caution'>If the driver above isn't working, change the driver to WinUSB.</Aside>
   </TabItem>
   
-  <TabItem label="Mac" icon='apple'>
+  <TabItem label="macOS" icon='apple'>
     ```zsh
     brew install libusb
     ```
