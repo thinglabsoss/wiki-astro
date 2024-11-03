@@ -14,7 +14,7 @@ import {
 
 This page provides step-by-step instructions to set up your system for flashing your Car Thing, from tool preparation to software configuration for a successful process.
 
-## Installing Required Programs
+## Required Programs
 The flashing process requires some items to be successful
 
 ### Git
@@ -61,6 +61,30 @@ Python is used to run the Car Thing flasher
     <Aside type='tip'>What did you think linux is great!</Aside>
   </TabItem>
 
+</Tabs>
+
+### Pyamlboot
+
+To recognize the Car Thing is necessary some specific drivers
+
+<Tabs syncKey="system">
+  <TabItem label="Windows" icon='seti:windows'>
+  ```shell
+  python -m pip install git+https://github.com/superna9999/pyamlboot pyusb libusb
+  ```
+  </TabItem>
+  
+  <TabItem label="macOS" icon='apple'>
+    ```zsh
+    /opt/homebrew/bin/python3 -m pip install git+https://github.com/superna9999/pyamlboot
+    ```
+  </TabItem>
+
+  <TabItem label="Linux" icon='linux'>
+    ```bash
+    sudo python3 -m pip install git+https://github.com/superna9999/pyamlboot
+    ```
+  </TabItem>
 </Tabs>
 
 ### ADB
@@ -115,7 +139,6 @@ To recognize the Car Thing is necessary some specific drivers
     4. Then change it to “GX-CHIP” and click the little arrows to change it to LibusbK, then click install and wait for it to finish.
 
     5. ![zadix_libusbk](/src/assets/docs/zadix_libusbk.png)
-
     </Steps>
 
     <Aside type='caution'>If the driver above isn't working, change the driver to WinUSB.</Aside>
