@@ -32,18 +32,18 @@ export default defineConfig({
             },
           ],
         },
-        {
-          label: 'Official Apps',
-          autogenerate: {
-            directory: 'official-apps',
-          },
-        },
-        {
-          label: 'Community Apps',
-          autogenerate: {
-            directory: 'community-apps',
-          },
-        },
+        // {
+        //   label: 'Official Apps',
+        //   autogenerate: {
+        //     directory: 'official-apps',
+        //   },
+        // },
+        // {
+        //   label: 'Community Apps',
+        //   autogenerate: {
+        //     directory: 'community-apps',
+        //   },
+        // },
       ],
     }),
     tailwind({
