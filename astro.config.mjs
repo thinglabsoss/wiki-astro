@@ -33,6 +33,12 @@ export default defineConfig({
           ],
         },
         // {
+        //   label: 'CarThing Customization',
+        //   autogenerate: {
+        //     directory: 'carthing-customization',
+        //   },
+        // },
+        // {
         //   label: 'Official Apps',
         //   autogenerate: {
         //     directory: 'official-apps',
