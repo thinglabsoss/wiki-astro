@@ -51,40 +51,12 @@ Python is used to run the Car Thing flasher
 
   <TabItem label="macOS" icon='apple'>
     Install [Homebrew](https://brew.sh/) and python will come along.
-
-     <Aside >
-      Homebrew is necessary since the macOSOS default python installation dosen't work with the installer
-    </Aside>
   </TabItem>
 
   <TabItem label="Linux" icon='linux'>
     <Aside type='tip'>What did you think linux is great!</Aside>
   </TabItem>
 
-</Tabs>
-
-### Pyamlboot
-
-To recognize the Car Thing is necessary some specific drivers
-
-<Tabs syncKey="system">
-  <TabItem label="Windows" icon='seti:windows'>
-  ```shell
-  python -m pip install git+https://github.com/superna9999/pyamlboot pyusb libusb
-  ```
-  </TabItem>
-  
-  <TabItem label="macOS" icon='apple'>
-    ```zsh
-    /opt/homebrew/bin/python3 -m pip install git+https://github.com/superna9999/pyamlboot
-    ```
-  </TabItem>
-
-  <TabItem label="Linux" icon='linux'>
-    ```bash
-    sudo python3 -m pip install git+https://github.com/superna9999/pyamlboot
-    ```
-  </TabItem>
 </Tabs>
 
 ### ADB
@@ -134,11 +106,11 @@ To recognize the Car Thing is necessary some specific drivers
 
     2. [Download and Install Zadig](https://zadig.akeo.ie). After its installed click options then “list all devices”.
 
-    3. ![zadix_options](/src/assets/docs/zadix_ignore.png)
+    3. ![zadix_options](https://thingify.tools/files/images/zadix_ignore.png)
 
     4. Then change it to “GX-CHIP” and click the little arrows to change it to LibusbK, then click install and wait for it to finish.
 
-    5. ![zadix_libusbk](/src/assets/docs/zadix_libusbk.png)
+    5. ![zadix_libusbk](https://thingify.tools/files/images/zadix_libusbk.png)
     </Steps>
 
     <Aside type='caution'>If the driver above isn't working, change the driver to WinUSB.</Aside>
@@ -158,3 +130,35 @@ To recognize the Car Thing is necessary some specific drivers
   </TabItem>
 </Tabs>
 
+
+### Pyamlboot
+
+To recognize the Car Thing is necessary some specific drivers
+
+<Tabs syncKey="system">
+  <TabItem label="Windows" icon='seti:windows'>
+  ```shell
+  python -m pip install git+https://github.com/superna9999/pyamlboot pyusb libusb
+  ```
+  </TabItem>
+  
+  <TabItem label="macOS" icon='apple'>
+    ```zsh
+    python3 -m pip install git+https://github.com/superna9999/pyamlboot git+https://github.com/pyusb/pyusb
+    ```
+
+    <Aside type='note'>
+    If a error appears stating `This environment is externally managed` add the following flag to the command above
+
+    ```
+    --break-system-packages
+    ```
+    </Aside>
+  </TabItem>
+
+  <TabItem label="Linux" icon='linux'>
+    ```bash
+    sudo python3 -m pip install git+https://github.com/superna9999/pyamlboot
+    ```
+  </TabItem>
+</Tabs>

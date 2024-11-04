@@ -4,18 +4,72 @@ description: A guide on how to flash your Car Thing.
 ---
 
 
-import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Tabs, TabItem, Steps, FileTree, Aside } from '@astrojs/starlight/components';
 
 Guides lead a user through a specific task they want to accomplish, often with a sequence of steps.
 Writing a good guide requires thinking about what your users are trying to do.
 
-## Further reading
+## Superbird Tool
+ 
+<Steps>
+1. Download the [Superbird Tool](https://github.com/thinglabsoss/superbird-tool) from Thing Labs Github
 
-- Read [about how-to guides](https://diataxis.fr/how-to-guides/) in the Diátaxis framework
+2. Download the latest image (8.9.2) from [thingify.tools](https://thingify.tools/firmware/P3QZbZIDWnp5m_azQFQqP?tab=info)
+
+3. Unzip the zip file into the superbird-tool
+</Steps>
+
+<FileTree>
+- superbird-tool/
+  - images/
+    - **8.9.2-thinglabs/**
+</FileTree>
+
+<br />
+<Steps>
+4. Plug the USB end of the Car Thing's USB-C cable into the computer while holding down the top buttons 1 and 4. This will put it into USB burning mode.
+</Steps>
+
+<Aside type='note'>
+  We recommend using a A to C usb 2.0 cable if available, and avoid using hubs or docks to connect your CarThing. 
+</Aside>
+
+<br />
+<Steps>
+5. Open the superbird-tool folder on a Terminal window
+
+6. Run the following command (it will enable the burn_mode on the CarThing)
+</Steps>
+
+```shell
+python superbird_tool.py --burn_mode
+```
 
 
-<Tabs syncKey="system">
+<br />
+<Steps>
+7. Run the following command (it will flash the image into the CarThing)
+</Steps>
+
+```shell
+python superbird_tool.py --restore_device images/8.9.2-thinglabs
+```
+
+<Aside type='note' title='This process may take some time.'>
+   The `data` and `settings` partitions are not required if a error occurs with those partitions just move foward with the process.
+</Aside>
+
+<br />
+<Steps>
+8. After the flashing is done, unplug and reconnect the USB cable on the CarThing without pressing any buttons.
+
+9. If the flashing was successful you will see the Thing Labs logo on the boot of the CarThing
+</Steps>
+
+
+
+{/* <Tabs syncKey="system">
   <TabItem label="Windows" icon='seti:windows'></TabItem>
-  <TabItem label="Mac" icon='apple'></TabItem>
+  <TabItem label="macOS" icon='apple'></TabItem>
   <TabItem label="Linux" icon='linux'></TabItem>
-</Tabs>
+</Tabs> */}
