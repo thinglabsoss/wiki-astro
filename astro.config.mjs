@@ -27,6 +27,10 @@ export default defineConfig({
               slug: 'first-steps/flashing',
             },
             {
+              label: 'ADB Tools',
+              slug: 'first-steps/adb',
+            },
+            {
               label: 'Choose a Car Thing Application',
               slug: 'first-steps/applications',
             },
@@ -94,10 +98,6 @@ export default defineConfig({
             {
               label: 'Flashing',
               slug: 'legacy/alternative-flashing',
-            },
-            {
-              label: 'ADB Tools',
-              slug: 'legacy/adb',
             },
           ],
         },
