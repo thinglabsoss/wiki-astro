@@ -1,0 +1,119 @@
+---
+title: DeskThing Server
+---
+
+import { Aside,
+Icon ,Tabs, TabItem } from '@astrojs/starlight/components';
+
+The DeskThing desktop server application is your interface for managing DeskThing. This section describes how to install the app and configure its settings. 
+
+DeskThing support the following platforms:
+
+**Windows 10/11**
+
+**Linux x64/x86**
+
+**Mac with ARM Processors**
+
+**Mac with Intel Processors**
+
+**Linux ARM (Coming Soon)**
+
+## Installation and Setup
+Complete the following steps to connect your Car Thing to the DeskThing Desktop server. Prefer video guides? See [DeskThing Youtube](https://www.youtube.com/@DeskThing)
+
+<Tabs syncKey="system">
+  <TabItem label="Windows" icon='seti:windows'>
+
+1.) Download the DeskThing desktop server installer from [DeskThing.App/Releases](https://deskthing.app/releases).
+
+2.) Run deskthing-win-x.x.x-setup.exe.
+
+3.) After running, the app should open.
+
+4.) Navigate to **Clients**.
+
+![DeskThing_Clients](/src/assets/docs/DeskThing_Clients.png)
+
+5.) You may notice that no device is found initially. Select **Refresh ADB** to refresh the device list.
+
+6.) If you see are warning stating "Not Connected!", select the **Configure** icon.
+
+![DeskThing_Configure](/src/assets/docs/DeskThing_Configure.png)
+
+7.) You should now be able to see your device connected!
+
+![Device_Connected](/src/assets/docs/CarThing_Device_Connected.png)
+
+## Suggested Settings Changes
+
+
+1.) Navigate to **Settings** in the bottom left corner and select **Device**. 
+
+2.) Enable **Auto Detect ADB**, **Use Global ADB**, and **Auto Config**. This will ensure the device properly connects each time the Car Thing boots.
+
+![Device_Settings](/src/assets/docs/Device_Settings.png)
+  </TabItem>
+    
+  <TabItem label="Mac" icon='apple'>
+1.) Download the DeskThing desktop server installer from [DeskThing.App/Releases](https://deskthing.app/releases).
+
+2.) Install deskthing-mac-arm64-0.10.0-setup.dmg for Apple Silcon Devices or deskthing-mac-x64-0.10.0-setup.dmg for intel devices.
+
+3.) After installing, open the app.
+
+4.) Navigate to **Clients**.
+
+![DeskThing_Clients](/src/assets/docs/DeskThing_Clients.png)
+
+5.) You may notice that no device is found initially. Select **Refresh ADB** to refresh the device list.
+
+6.) If you see are warning stating "Not Connected!", select the **Configure** icon.
+
+![DeskThing_Configure](/src/assets/docs/DeskThing_Configure.png)
+
+7.) You should now be able to see your device connected!
+
+![Device_Connected](/src/assets/docs/CarThing_Device_Connected.png)
+
+## Suggested Settings Changes
+
+
+1.) Navigate to **Settings** in the bottom left corner and select **Device**. 
+
+2.) Enable **Auto Detect ADB**, **Use Global ADB**, and **Auto Config**. This will ensure the device properly connects each time the Car Thing boots.
+
+![Device_Settings](/src/assets/docs/Device_Settings.png)
+  </TabItem>
+
+  <TabItem label="Linux" icon='linux'>
+1.) Download the DeskThing desktop server installer from [DeskThing.App/Releases](https://deskthing.app/releases).
+
+2.) Install deskthing-linux-0.10.0-setup.AppImage.
+
+3.) After installing, open the app.
+
+4.) Navigate to **Clients**.
+
+![DeskThing_Clients](/src/assets/docs/DeskThing_Clients.png)
+
+5.) You may notice that no device is found initially. Select **Refresh ADB** to refresh the device list.
+
+6.) If you see are warning stating "Not Connected!", select the **Configure** icon.
+
+![DeskThing_Configure](/src/assets/docs/DeskThing_Configure.png)
+
+7.) You should now be able to see your device connected!
+
+![Device_Connected](/src/assets/docs/CarThing_Device_Connected.png)
+
+## Suggested Settings Changes
+
+
+1.) Navigate to **Settings** in the bottom left corner and select **Device**. 
+
+2.) Enable **Auto Detect ADB**, **Use Global ADB**, and **Auto Config**. This will ensure the device properly connects each time the Car Thing boots.
+
+![Device_Settings](/src/assets/docs/Device_Settings.png)      
+  </TabItem>
+</Tabs>

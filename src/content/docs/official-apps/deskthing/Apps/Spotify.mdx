@@ -1,0 +1,93 @@
+---
+title: Spotify App
+---
+import { Aside,
+Icon ,Tabs, TabItem } from '@astrojs/starlight/components';
+
+![Spotify_App](/src/assets/docs/DeskThing_SpotifyApp.jpg)
+
+The Spotify DeskThing app is an integration with the Spotify API that enables the following:
+- Show information for the Spotify music and podcasts you are playing including the following: Album, Artist, Song Name, Album Art.
+- Control Spotify with onscreen buttons including play, pause, skip, rewind, shuffle, and repeat.
+- Set the audio output source
+
+## Setup
+Complete the following steps to setup the Spotify DeskThing app.
+### Spotify Developer App
+For the Spotify DeskThing app to receive realtime updates about your Spotify playback you need a Client ID and Client Secret.
+1.) Navigate to [Spotify_Developer_Dashboard](https://developer.spotify.com/dashboard)
+
+2.) Select the **Create App** button.
+
+3.) Enter an app name and description. This can be anything you want.
+
+4.) In the Redirect URI's entry box, enter "http://localhost:8888/callback/spotify" and hit **add**.
+
+5.) Check the box for the Spotify developer agreement policy.
+
+6.) Select **Save**.
+
+![Spotify_Dev_app](/src/assets/docs/Spotify_Dev_App.png)
+
+7.) Once created, click on the app and then settings.
+
+8.) In the settings page, copy the Client ID and Client Secret and save them somewhere you can access them.
+
+### Configuration
+After getting your Client ID and Client Secret you are ready to proceed with setting up the Spotify DeskThing App.
+
+1.) In the DeskThing Desktop Client, navigate to the **Downloads** tab.
+
+![DeskThing_Downloads](/src/assets/docs/DeskThing_Downloads.png)
+
+2.) Scroll down until you locate the Spotify App and select the download Icon. 
+![Spotify_Dev_app](/src/assets/docs/Download_App.png)
+
+<Aside type='note'>After downloading a notification should appear on the left side of the screen. </Aside>
+
+3.) Navigate Notifications and then Request.
+
+4.) Within the Request tab you should find an App Request for the Spotify App. 
+Enter the Client ID and Client Secret you got earlier 
+and select the submit check button in the bottom right corner. Leave the **Redirect URL** default unless necessary
+have a reason to change it.
+
+![Spotify_Request](/src/assets/docs/Spotify_Request.png)
+
+<Aside type='note'>After hitting submit a new window should open in your web browser with a success message.</Aside>
+
+5.) Navigate to **Settings**
+
+![DeskThing_Settings](/src/assets/docs/DeskThing_Settings.png)
+
+6.) Under the **Music** tab, select the drop down for playback sources, select **Spotify App**, and select **Save**.
+
+![DeskThing_Music](/src/assets/docs/DeskThing_Music.png)
+
+<Aside type='note'>Enable and set a refresh interval to assist with keeping the DeskThing app properly synchronized.</Aside>
+
+### Navigation and Control
+
+The spotify app has a few navigation and control options you can use to better manage your music.
+
+Turning CarThing Dial - Turns up and down the Spotify service volume. This does not impact system volume. 
+Pressing CarThing Dial - Pause/Play Spotify.
+Left-hand Screen Tap - Tapping the left hand side of the screen displays a flyout menu with music information.
+Left-hand Screen Tap - Tapping the right hand side of the screen displays four playlist options. See Playlist Management for configuration.
+
+#### Playlist Management
+
+Playlists can be added and managed in DeskThing Spotify App. Tap the right hand side of the screen to bring up the menu.
+![DeskThing_SpotifyPlaylists](/src/assets/docs/DeskThing_SpotifyPlaylists.png)
+
+Tap the playlist button and tap the right arrow to cycle through the following options:
+
+**Play Playlist** - Plays the configured playlist shortcut.
+
+**Add Song** - Adds the currently playing song to the active playlist.
+
+**Set Playlist** - Sets the playlist shortcut to the currently active song playlist.
+
+
+
+

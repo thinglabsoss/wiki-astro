@@ -1,5 +1,5 @@
 ---
-title: DeskThing Client API Reference
+title: Building an App
 description: Documentation for the DeskThing client-side JavaScript API
 ---
 

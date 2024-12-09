@@ -1,21 +1,73 @@
 ---
-title: Flashing your Car Thing
+title: Flash your Car Thing
 description: A guide on how to flash your Car Thing.
 ---
 
+import { Aside,Icon ,Tabs, TabItem } from '@astrojs/starlight/components';
 
-import { Tabs, TabItem } from '@astrojs/starlight/components';
+This page provides step-by-step instructions for flashing your Car Thing with the Terbium webpage.
 
-Guides lead a user through a specific task they want to accomplish, often with a sequence of steps.
-Writing a good guide requires thinking about what your users are trying to do.
-
-## Further reading
-
-- Read [about how-to guides](https://diataxis.fr/how-to-guides/) in the Diátaxis framework
-
-
+## Flashing Tools
+Flash your car thing has a different process for Windows then for Mac and Linux. For the easiest flashing process, use a Windows device
 <Tabs syncKey="system">
-  <TabItem label="Windows" icon='seti:windows'></TabItem>
-  <TabItem label="Mac" icon='apple'></TabItem>
-  <TabItem label="Linux" icon='linux'></TabItem>
+  <TabItem label="Windows" icon='seti:windows'>
+  ### Terbium
+    Complete the following steps to flash the Car Thing.
+    
+    1.) Navigate to [thingify.tools](https://thingify.tools/firmware/P3QZbZIDWnp5m_azQFQqP?tab=versions), select the arrow for the latest release, and select the download button to download "version.number.here-thinglabs.zip".
+   
+    2.) Extract the zip into an accessible location.
+   
+    3.) Navigate to [Terbium.app](https://terbium.app/)
+
+    4.) Plug in a USB-C-to-C or USB-A-to-C cable into the Car Thing Power Supply USB-C Port.
+
+    5.) While holding top preset buttons 1 and 4, plug the USB into the computer. This will put the device into USB burning mode.
+
+        ![Carthing](/src/assets/docs/CarThing.png)
+
+        <Aside type='caution'>Ensure your USB port power supply and cable are capable of 
+         passing data and providing ample power to the car thing.</Aside>
+
+    6.) Select the **Done** button. 
+
+    ![terbium-done](/src/assets/docs/terbium-done.png)
+
+    7.) A new popup should appear with a device listed as "unknown device from Amlogic, Inc". Ensure that your adblock is not stopping this popup. 
+    
+    <Aside type='note'>If no device is identified, make sure the Car Thing is in USB burn mode, see steps 4 and 5.</Aside> 
+
+    8.) Select the device, then **Connect**.
+
+    ![terbium-select-device](/src/assets/docs/terbium-select-device.png)
+
+    <Aside type='caution'>If the system has been used to flash Car Thing previously using a legacy method
+    an "Access Denied" error may appear. See the Terbium troubleshooting window
+    for details on removing old drivers.</Aside>
+
+    9.) Once connected, select the button **Restore Local Folder**, navigate to the thingify.tools extracted zip directory and select **Open**.
+    ![terbium-restore-local](/src/assets/docs/terbium-restore-local.png)
+
+    10.) A popup should appear requesting to let the site view the files, select **View files**.
+
+    ![terbium-view-files](/src/assets/docs/terbium-view-files.png)
+
+    11.) Select the **Select** button to start the flashing process.
+
+    ![terbium-select-files](/src/assets/docs/terbium-select-files.png)
+
+    <Aside type='note'>Press **F12** on a keyboard to view the flashing logs. If
+    an error occurs while attempting to flash, review the logs and provide them 
+    in a support thread on the DeskThing Discord.</Aside> 
+
+  </TabItem>
+    
+  <TabItem label="Mac" icon='apple'>
+   Coming Soon!
+  </TabItem>
+
+  <TabItem label="Linux" icon='linux'>
+   Coming Soon!
+  </TabItem>
 </Tabs>
+

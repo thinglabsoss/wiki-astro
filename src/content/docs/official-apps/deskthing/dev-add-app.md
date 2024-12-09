@@ -1,5 +1,5 @@
 ---
-title: Adding an App to DesThing
+title: Developing an App
 description: Documentation for adding a new app to DesThing
 ---
 
