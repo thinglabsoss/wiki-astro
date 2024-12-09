@@ -23,84 +23,33 @@ export default defineConfig({
           label: 'First Steps',
           items: [
             {
-              label: 'Flashing The Car Thing',
+              label: 'Setting up',
+              slug: 'first-steps/setup-env',
+            },
+            {
+              label: 'Flashing your Car Thing',
               slug: 'first-steps/flashing',
             },
-            {
-              label: 'ADB Tools',
-              slug: 'first-steps/adb',
-            },
-            {
-              label: 'Choose a Car Thing Application',
-              slug: 'first-steps/applications',
-            },
           ],
         },
-        {
-          label: 'Official Apps',
-          items: [
-            {
-              label: 'DeskThing',
-              items: [
-                {
-                  label: 'Introduction',
-                  slug: 'official-apps/deskthing/introduction',
-                },
-                {
-                  label: 'DeskThing Server',
-                  slug: 'official-apps/deskthing/deskthing-server',
-                },
-                {
-                  label: 'Managing Apps',
-                  slug: 'official-apps/deskthing/managing-apps',
-                },
-                {
-                  label: 'Apps',
-                  autogenerate: { directory: 'official-apps/DeskThing/Apps' },
-                },
-                {
-                  label: 'FAQ',
-                  autogenerate: { directory: 'official-apps/DeskThing/FAQ' },
-                },
-              ]
-            },
-          ],
-        },
-        {
-          label: 'Community Apps',
-          items: [
-            {
-              label: 'GlanceThing',
-              autogenerate: { directory: 'community-apps/GlanceThing' },
-            },
-            {
-              label: 'Nocturne',
-              autogenerate: { directory: 'community-apps/Nocturne' },
-            },
-          ],
-        },
-        {
-          label: 'App Development',
-          items: [
-            {
-              label: 'Introduction',
-              autogenerate: { directory: 'app-development' },
-            },
-          ],
-        },
-        {
-          label: 'Legacy Documentation',
-          items: [
-            {
-              label: 'Setting Up',
-              slug: 'legacy/setup-env',
-            },
-            {
-              label: 'Flashing',
-              slug: 'legacy/alternative-flashing',
-            },
-          ],
-        },
+        // {
+        //   label: 'CarThing Customization',
+        //   autogenerate: {
+        //     directory: 'carthing-customization',
+        //   },
+        // },
+        // {
+        //   label: 'Official Apps',
+        //   autogenerate: {
+        //     directory: 'official-apps',
+        //   },
+        // },
+        // {
+        //   label: 'Community Apps',
+        //   autogenerate: {
+        //     directory: 'community-apps',
+        //   },
+        // },
       ],
     }),
     tailwind({
