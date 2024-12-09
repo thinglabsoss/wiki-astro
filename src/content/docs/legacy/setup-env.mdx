@@ -1,0 +1,115 @@
+---
+title: Setting up your system
+description: How to setup your system.
+---
+
+import { Aside,
+Icon ,Tabs, TabItem } from '@astrojs/starlight/components';
+
+
+This page provides step-by-step instructions to set up your system for flashing your Car Thing, from tool preparation to software configuration for a successful flashing process.
+
+## Installing Prerequisite Programs
+Flashing the CarThing requires additional programs and drivers.
+
+### Git
+<Tabs syncKey="system">
+
+  <TabItem label="Windows" icon='seti:windows'>
+    Install Git on your system [here](https://git-scm.com/downloads).
+  </TabItem>
+
+  <TabItem label="Mac" icon='apple'>
+    Install Git on your system using the commad 'git --versions'
+  </TabItem>
+
+  <TabItem label="Linux" icon='linux'>
+    Install Git on your system using the command 'sudo apt install git'
+  </TabItem>
+</Tabs>
+
+
+### Python
+
+Python is required to run the Car Thing flasher program (superbird). 
+
+<Tabs syncKey="system">
+
+  <TabItem label="Windows" icon='seti:windows'>
+    Python no longer needs to be manually installed for the latest Windows flashing process! 
+  </TabItem>
+
+  <TabItem label="Mac" icon='apple'>
+    Install [Homebrew](https://brew.sh/) and python will be installed with it.
+
+     <Aside >
+      Homebrew is necessary because the macOS default python installation isn't compatible with the installer.
+    </Aside>
+  </TabItem>
+
+  <TabItem label="Linux" icon='linux'>
+    Run the following command:
+    ```zsh
+    sudo apt-ghet install python3
+    ```  
+  </TabItem>
+
+</Tabs>
+
+### Drivers
+
+To connect to the Car Thing, it is necessary to install specific drivers that are compatible with the device.
+
+<Tabs syncKey="system">
+  <TabItem label="Windows" icon='seti:windows'>
+    Complete the following steps to connect the Car Thing to your computer and install the proper USB Drivers.
+    
+    1.) Plug in a USB-C-to-C or USB-A-to-C cable into the Car Thing Power Supply Port.
+
+    2.) While holding top preset buttons 1 and 4, plug the USB into the computer. This will put the device into USB burning mode.
+
+        ![Carthing](/src/assets/docs/CarThing.png)
+
+        <Aside type='caution'>Ensure your USB power supply and cable are capable of 
+         passing data and providing ample power to the car thing.</Aside>
+
+    3.) Install Zadig from [here](https://zadig.akeo.ie). This tool is used to modify the computer USB drivers.
+   
+    4.) After the driver is installed select options, then “list all devices”.
+
+    ![zadix_options](/src/assets/docs/zadix_ignore.png)
+
+    5.) Within the drop-down change the select “GX-CHIP”. Select the "Edit" checkbox and replace the name with "WorldCup Device".
+
+    <Aside type='caution'>This name is case sensitive!</Aside>
+
+    6.) In the "Driver" field select the up or down arrows to cycle through the list of drivers. Press the up arrow until you see the option "libusbK".
+    
+    7.) Select "Replace Driver" and wait for it to finish. This can take several minutes.
+
+    ![zadix_libusbk](/src/assets/docs/zadix_libusbk.png)
+
+    <Aside type='note'>If this driver does not work, try using the WinUSB driver instead.</Aside>
+
+    To verify the driver has changed successfully, navigate to the windows device manager. You should find a drop down titled "libuse-win32 devices" and a device named "WorldCup Device"
+
+    ![device_manager](/src/assets/docs/device-manager.png)
+
+    <Aside type='note'>Still having problems? Try uninstalling the driver within Device Manager and then power cycling the car thing.</Aside>
+  </TabItem>
+    
+  <TabItem label="Mac" icon='apple'>
+    ```zsh
+    brew install libusb 
+    ```
+  </TabItem>
+
+  <TabItem label="Linux" icon='linux'>
+    With your package manager of choice install the packages
+    ```zsh
+    libusb libusb-compat
+    ```
+  </TabItem>
+</Tabs>
+
+
