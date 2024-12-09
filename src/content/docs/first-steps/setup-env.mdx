@@ -1,0 +1,164 @@
+---
+title: Setting up your system
+description: How to setup your system.
+---
+
+import { 
+  Aside, 
+  Steps,
+  Icon,
+  Tabs, 
+  TabItem
+ } from '@astrojs/starlight/components';
+
+
+This page provides step-by-step instructions to set up your system for flashing your Car Thing, from tool preparation to software configuration for a successful process.
+
+## Required Programs
+The flashing process requires some items to be successful
+
+### Git
+<Tabs syncKey="system">
+
+  <TabItem label="Windows" icon='seti:windows'>
+    [Install Git on your system if is not available](https://git-scm.com/downloads)
+  </TabItem>
+
+  <TabItem label="macOS" icon='apple'>
+    <Aside type='note'>It already comes pre-installed!</Aside>
+  </TabItem>
+
+
+  <TabItem label="Linux" icon='linux'>
+    <Aside type='note'>It already comes pre-installed!</Aside>
+  </TabItem>
+</Tabs>
+
+
+### Python
+
+Python is used to run the Car Thing flasher 
+
+<Tabs syncKey="system">
+
+  <TabItem label="Windows" icon='seti:windows'>
+    Download and Install the [lastest python version](https://www.python.org/downloads/)
+
+    <Aside>
+    Don't forget to check Add Python to PATH option on the installer as menitoned [here](https://docs.python.org/3/using/windows.html#installation-steps)
+    </Aside>
+  </TabItem>
+
+  <TabItem label="macOS" icon='apple'>
+    Install [Homebrew](https://brew.sh/) and python will come along.
+  </TabItem>
+
+  <TabItem label="Linux" icon='linux'>
+    <Aside type='tip'>What did you think linux is great!</Aside>
+  </TabItem>
+
+</Tabs>
+
+### ADB
+
+To communicate with the Car Thing adb is necessary
+
+<Tabs syncKey="system">
+  <TabItem label="Windows" icon='seti:windows'>
+  <Steps>
+    1. Download the [Android SDK Platform Tools ZIP file for Windows](https://dl.google.com/android/repository/platform-tools-latest-windows.zip)
+  
+    2. Extract the contents of this ZIP file into an easily accessible folder (such as C:\platform-tools).
+
+    3. Add folder to Windows PATH. 
+  </Steps>
+  </TabItem>
+  
+  <TabItem label="macOS" icon='apple'>
+    ```zsh
+    brew install android-platform-tools
+    ```
+  </TabItem>
+
+  <TabItem label="Linux" icon='linux'>
+    With your package manager of choice install the package
+
+    For Debian/Ubuntu based Linux
+    ```
+    android-sdk-platform-tools
+    ```
+
+    For Fedora/SUSE based Linux
+    ```
+    android-tools
+    ```
+  </TabItem>
+</Tabs>
+
+### Drivers
+
+To recognize the Car Thing is necessary some specific drivers
+
+<Tabs syncKey="system">
+  <TabItem label="Windows" icon='seti:windows'>
+  <Steps>
+    1. Plug in the USB end of the Car Things USB C cable into the computer, then hold top buttons 1, and 4 and plug in the USB C into the Car Thing, this will put it in USB burning mode.
+
+    2. [Download and Install Zadig](https://zadig.akeo.ie). After its installed click options then “list all devices”.
+
+    3. ![zadix_options](https://thingify.tools/files/images/zadix_ignore.png)
+
+    4. Then change it to “GX-CHIP” and click the little arrows to change it to LibusbK, then click install and wait for it to finish.
+
+    5. ![zadix_libusbk](https://thingify.tools/files/images/zadix_libusbk.png)
+    </Steps>
+
+    <Aside type='caution'>The driver above may not work, changing the driver to WinUSB may solve the issue.</Aside>
+  </TabItem>
+  
+  <TabItem label="macOS" icon='apple'>
+    ```zsh
+    brew install libusb
+    ```
+  </TabItem>
+
+  <TabItem label="Linux" icon='linux'>
+    With your package manager of choice install the packages
+    ```
+    libusb libusb-compat
+    ```
+  </TabItem>
+</Tabs>
+
+
+### Pyamlboot
+
+To recognize the Car Thing is necessary some specific drivers
+
+<Tabs syncKey="system">
+  <TabItem label="Windows" icon='seti:windows'>
+  ```shell
+  python -m pip install git+https://github.com/superna9999/pyamlboot pyusb libusb
+  ```
+  </TabItem>
+  
+  <TabItem label="macOS" icon='apple'>
+    ```zsh
+    python3 -m pip install git+https://github.com/superna9999/pyamlboot git+https://github.com/pyusb/pyusb
+    ```
+
+    <Aside type='note'>
+    If a error appears stating `This environment is externally managed` add the following flag to the command above
+
+    ```
+    --break-system-packages
+    ```
+    </Aside>
+  </TabItem>
+
+  <TabItem label="Linux" icon='linux'>
+    ```bash
+    sudo python3 -m pip install git+https://github.com/superna9999/pyamlboot
+    ```
+  </TabItem>
+</Tabs>
