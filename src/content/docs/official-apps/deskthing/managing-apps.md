@@ -2,7 +2,7 @@
 title: Managing Apps
 ---
 
-You can vastly increase the functionality of DeskThing by loading official or community apps into DeskThing Server.
+DeskThing is vastly increased in functionality by loading official or community apps into DeskThing Server.
 
 ## Adding Official Apps
 Official apps have been developed by RipRod or the ThingLabs team. Official apps can be installed using the following steps:
@@ -25,7 +25,7 @@ Official apps have been developed by RipRod or the ThingLabs team. Official apps
 
 
 ## Adding Community Apps
-Communitity apps are unofficial projects. You can find the full list of recognized community apps at [deskthing.app/apps](https://deskthing.app/apps). They are created, maintained, and supported by members of the DeskThing community. Submit all issues to the respective GitHub pages. 
+Communitity apps are unofficial projects. Find the full list of recognized community apps at [deskthing.app/apps](https://deskthing.app/apps). They are created, maintained, and supported by members of the DeskThing community. Submit all issues to the respective GitHub pages. 
 
 Community apps can be installed using the following steps:
 
@@ -49,9 +49,9 @@ Community apps can be installed using the following steps:
 
 ## Modifying App Settings
 
-To modify complete the following steps:
+To modify app settings complete the following steps:
 
-1.) Select the **Apps** tab and select the **Settings** button for the you app want to configure.
+1.) Select the **Apps** tab and select the **Settings** button for the desired app.
 
 ![DeskThing_AppSettings](/src/assets/docs/DeskThing_AppSettings.png)
 
@@ -71,7 +71,7 @@ Definitions:
 
 To disable, stop, or delete an app from DeskThing Server, complete the following steps:
 
-1.) Select the **Apps** tab and select the **Settings** button for the you app want to delete.
+1.) Select the **Apps** tab and select the **Settings** button for the desired app.
 
 ![DeskThing_AppSettings](/src/assets/docs/DeskThing_AppSettings.png)
 
@@ -81,9 +81,9 @@ To disable, stop, or delete an app from DeskThing Server, complete the following
 
 ## Locating App Version Info
 
-To modify complete the following steps:
+To find the app version info, complete the following steps:
 
-1.) Select the **Apps** tab and select the **Settings** button for the you app want to configure.
+1.) Select the **Apps** tab and select the **Settings** button for the you app want to view.
 
 ![DeskThing_AppSettings](/src/assets/docs/DeskThing_AppSettings.png)
 

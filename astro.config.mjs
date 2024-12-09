@@ -23,7 +23,7 @@ export default defineConfig({
           label: 'First Steps',
           items: [
             {
-              label: 'Flashing Your Car Thing',
+              label: 'Flashing The Car Thing',
               slug: 'first-steps/flashing',
             },
             {
