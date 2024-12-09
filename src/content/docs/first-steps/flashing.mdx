@@ -1,57 +1,81 @@
 ---
-title: Flash the Car Thing
-description: A guide on how to flash the Car Thing.
+title: Flashing your Car Thing
+description: A guide on how to flash your Car Thing.
 ---
 
-import { Aside,Icon ,Tabs, TabItem } from '@astrojs/starlight/components';
 
-This page provides step-by-step instructions for flashing the Spotify Car Thing with the Terbium webpage.
-  
-  ### Flashing with Terbium
-    Complete the following steps to flash the Car Thing.
-    
-    1.) Navigate to [thingify.tools](https://thingify.tools/firmware/P3QZbZIDWnp5m_azQFQqP?tab=versions), select the arrow for the latest release, and select the download button to download "version.number.here-thinglabs.zip".
-   
-    2.) Extract the zip into an accessible location.
-   
-    3.) Navigate to [Terbium.app](https://terbium.app/)
+import { Tabs, TabItem, Steps, FileTree, Aside } from '@astrojs/starlight/components';
 
-    4.) Plug in a USB-C-to-C or USB-A-to-C cable into the Car Thing Power Supply USB-C Port.
+Guides lead a user through a specific task they want to accomplish, often with a sequence of steps.
+Writing a good guide requires thinking about what your users are trying to do.
 
-    5.) While holding top preset buttons 1 and 4, plug the USB into the computer. This will put the device into USB burning mode.
+## Superbird Tool
+ 
 
-        ![Carthing](/src/assets/docs/CarThing.png)
+### Download the tool
+<Steps>
+1. Download the [Superbird Tool](https://github.com/thinglabsoss/superbird-tool) from Thing Labs Github
 
-        <Aside type='caution'>Ensure the USB port power supply and cable are capable of 
-         passing data and providing ample power to the car thing.</Aside>
+2. Download the latest image **(8.9.2)** from [thingify.tools](https://thingify.tools/firmware/P3QZbZIDWnp5m_azQFQqP?tab=info)
 
-    6.) Select the **Done** button. 
+3. Unzip the zip file into the superbird-tool/images folder
+</Steps>
 
-    ![terbium-done](/src/assets/docs/terbium-done.png)
+<FileTree>
+- superbird-tool/
+  - images/
+    - **8.9.2-thinglabs/**
+</FileTree>
 
-    7.) A new popup should appear with a device listed as "unknown device from Amlogic, Inc". Ensure that an adblock is not stopping this popup. 
-    
-    <Aside type='note'>If no device is identified, make sure the Car Thing is in USB burn mode, see steps 4 and 5.</Aside> 
+<br />
 
-    8.) Select the device, then **Connect**.
+### Flashing
+<Steps>
+4. Plug the USB end of the Car Thing's USB-C cable into the computer while holding down the top buttons 1 and 4. This will put it into USB burning mode.
+</Steps>
 
-    ![terbium-select-device](/src/assets/docs/terbium-select-device.png)
+<Aside type='note'>
+  We recommend using a A to C usb 2.0 cable if available, and avoid using hubs or docks to connect your CarThing. 
+</Aside>
 
-    <Aside type='caution'>If the system has been used to flash Car Thing previously using a legacy method
-    an "Access Denied" error may appear. See the Terbium troubleshooting window
-    for details on removing old drivers.</Aside>
+<br />
+<Steps>
+5. Open the superbird-tool folder on a Terminal window
 
-    9.) Once connected, select the button **Restore Local Folder**, navigate to the thingify.tools extracted zip directory and select **Open**.
-    ![terbium-restore-local](/src/assets/docs/terbium-restore-local.png)
+6. Run the following command (it will enable the burn_mode on the CarThing)
+</Steps>
 
-    10.) A popup should appear requesting to let the site view the files, select **View files**.
+```shell
+python superbird_tool.py --burn_mode
+```
 
-    ![terbium-view-files](/src/assets/docs/terbium-view-files.png)
 
-    11.) Select the **Select** button to start the flashing process.
+<br />
+<Steps>
+7. Run the following command (it will flash the image into the CarThing)
+</Steps>
 
-    ![terbium-select-files](/src/assets/docs/terbium-select-files.png)
+```shell
+python superbird_tool.py --restore_device images/8.9.2-thinglabs
+```
 
-    <Aside type='note'>Press **F12** on a keyboard to view the flashing logs. If
-    an error occurs while attempting to flash, review the logs and provide them 
-    in a support thread on the DeskThing Discord.</Aside> 
+<Aside type='note' title='This process may take some time.'>
+   The `data` and `settings` partitions are not required if a error occurs with those partitions just move foward with the process.
+</Aside>
+
+<br />
+<Steps>
+8. After the flashing is done, unplug and reconnect the USB cable on the CarThing without pressing any buttons.
+
+9. If the flashing was successful you will see the Thing Labs logo on the boot of the CarThing
+</Steps>
+
+
+### Caveats
+<Aside type="danger" title='AMD Issue'>
+Some users reports that flashing using a AMD system may fail.
+
+We recommend a BIOS update that may solve the issues, but if it persists try using another computer.
+
+Join our [discord](https://tl.mt/d) to get more in depth support if needed
+</Aside>
