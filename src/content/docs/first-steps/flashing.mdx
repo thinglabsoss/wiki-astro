@@ -1,49 +1,63 @@
 ---
-title: Flash the Car Thing
+title: Flashing the Car Thing
 description: A guide on how to flash the Car Thing.
 ---
 
-import { Aside,Icon ,Tabs, TabItem } from '@astrojs/starlight/components';
+import { Aside, Icon , Tabs, TabItem } from '@astrojs/starlight/components';
 
-This page provides step-by-step instructions for flashing the Spotify Car Thing with the Terbium webpage.
-  
+This page provides step-by-step instructions for flashing the Spotify Car Thing with the ThingLabs OS using the Terbium webpage. A device running Linux or Mac can be used to flash the Car Thing, however Windows is the suggested platform.
+
+![terbium-restore-local](/src/assets/docs/terbium-restore-local.png)
+
   ### Flashing with Terbium
     Complete the following steps to flash the Car Thing.
     
-    1.) Navigate to [thingify.tools](https://thingify.tools/firmware/P3QZbZIDWnp5m_azQFQqP?tab=versions), select the arrow for the latest release, and select the download button to download "version.number.here-thinglabs.zip".
+    1.) Navigate to [thingify.tools](https://thingify.tools/firmware/P3QZbZIDWnp5m_azQFQqP?tab=versions), select the right arrow for the latest release, and select the download button to download "version.number.here-thinglabs.zip".
    
     2.) Extract the zip into an accessible location.
    
     3.) Navigate to [Terbium.app](https://terbium.app/)
 
-    4.) Plug in a USB-C-to-C or USB-A-to-C cable into the Car Thing Power Supply USB-C Port.
+    4.) Plug in a USB-C-to-C or USB-A-to-C cable into the Car Thing power supply USB-C port.
 
-    5.) While holding top preset buttons 1 and 4, plug the USB into the computer. This will put the device into USB burning mode.
+    5.) While holding top preset buttons 1 and 4, plug the USB into the computer. This will put the device into USB burn mode.
 
         ![Carthing](/src/assets/docs/CarThing.png)
 
         <Aside type='caution'>Ensure the USB port power supply and cable are capable of 
          passing data and providing ample power to the car thing.</Aside>
 
-    6.) Select the **Done** button. 
-
-    7.) A new popup should appear with a device listed as "unknown device from Amlogic, Inc". Ensure that an adblock is not stopping this popup. 
+    6.) Flashing the Car Thing from Windows requires special USB drivers. From Windows PowerShell, send the following command:
     
-    <Aside type='note'>If no device is identified, make sure the Car Thing is in USB burn mode, see steps 4 and 5.</Aside> 
+    ```
+    irm https://driver.terbium.app/get | iex
+    ```
+    <Aside type='note'>Having problems with the script? The Zadig application can also be used to load the WinUSB driver, see [Legacy - Setting Up](/legacy/setup-env).</Aside> 
 
-    8.) Select the device, then **Connect**.
+    7.) Select the **Done** button. 
 
+    8.) A new popup should appear with a device listed as "GX-CHIP". Ensure that an adblock is not stopping this popup. 
+
+    <Aside type='note'>If no device is identified make sure the Car Thing is in USB burn mode, see step 5.</Aside> 
+
+    9.) Select the device, then **Connect**.
+
+    10.) The USB device will briefly reconnect. Select **Connect** again.
+    
+    11.) A popup should appear with the device now listed as "unknown device from Amlogic, Inc". Select the device, then **Connect**.
+    
     <Aside type='caution'>If the system has been used to flash Car Thing previously using a legacy method
-    an "Access Denied" error may appear. See the Terbium troubleshooting window
-    for details on removing old drivers.</Aside>
+    an "Access Denied" error may appear. To remove old drivers, open Windows Device Manager and look for either 
+    "GX-CHIP" or "WorldCup" Device in the list of devices. When found, right click, click **Uninstall device** and 
+    select **Attempt to remove the driver for this device**. Finally, click **Uninstall**. You may have to do this 
+    multiple times to ensure all previous drivers are removed. If the GX-CHIP device shows a warning symbol, install the driver 
+    again with the script in the previous section.</Aside>
 
-    9.) Once connected, select the button **Restore Local Folder**, navigate to the thingify.tools extracted zip directory and select **Open**.
-    
-    ![terbium-restore-local](/src/assets/docs/terbium-restore-local.png)
+    12.) Once connected, select the button **Restore Local Folder**, navigate to the thingify.tools extracted zip directory, and select **Open**.
 
-    10.) A popup should appear requesting to let the site view the files, select **View files**.
+    13.) A popup should appear requesting to let the site view the files, select **View files**.
 
-    11.) Select the **Select** button to start the flashing process.
+    14.) Select the **Select** button to start the flashing process.
 
     <Aside type='note'>Press **F12** on a keyboard to view the flashing logs. If
     an error occurs while attempting to flash, review the logs and provide them 

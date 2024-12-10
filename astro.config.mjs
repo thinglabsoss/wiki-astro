@@ -26,65 +26,26 @@ export default defineConfig({
               label: 'Flashing The Car Thing',
               slug: 'first-steps/flashing',
             },
-            {
-              label: 'ADB Tools',
-              slug: 'first-steps/adb',
-            },
-            {
-              label: 'Choose a Car Thing Application',
-              slug: 'first-steps/applications',
-            },
           ],
         },
         {
-          label: 'Official Apps',
-          items: [
-            {
-              label: 'DeskThing',
-              items: [
-                {
-                  label: 'Introduction',
-                  slug: 'official-apps/deskthing/introduction',
-                },
-                {
-                  label: 'DeskThing Server',
-                  slug: 'official-apps/deskthing/deskthing-server',
-                },
-                {
-                  label: 'Managing Apps',
-                  slug: 'official-apps/deskthing/managing-apps',
-                },
-                {
-                  label: 'Apps',
-                  autogenerate: { directory: 'official-apps/DeskThing/Apps' },
-                },
-                {
-                  label: 'FAQ',
-                  autogenerate: { directory: 'official-apps/DeskThing/FAQ' },
-                },
-              ]
-            },
-          ],
-        },
-        {
-          label: 'Community Apps',
-          items: [
-            {
-              label: 'GlanceThing',
-              autogenerate: { directory: 'community-apps/GlanceThing' },
-            },
-            {
-              label: 'Nocturne',
-              autogenerate: { directory: 'community-apps/Nocturne' },
-            },
-          ],
-        },
-        {
-          label: 'App Development',
+          label: 'DeskThing',
           items: [
             {
               label: 'Introduction',
-              autogenerate: { directory: 'app-development' },
+              slug: 'deskthing/introduction',
+            },
+            {
+              label: 'DeskThing Server',
+              slug: 'deskthing/deskthing-server',
+            },
+            {
+              label: 'Managing Apps',
+              slug: 'deskthing/managing-apps',
+            },
+            {
+              label: 'Official Apps',
+              autogenerate: { directory: 'DeskThing/Apps' },
             },
           ],
         },
@@ -98,6 +59,19 @@ export default defineConfig({
             {
               label: 'Flashing',
               slug: 'legacy/alternative-flashing',
+            },
+            {
+              label: 'ADB Tools',
+              slug: 'legacy/adb',
+            },
+          ],
+        },
+        {
+          label: 'Troubleshooting',
+          items: [
+            {
+              label: 'FAQ',
+              autogenerate: { directory: 'Troubleshooting' },
             },
           ],
         },
