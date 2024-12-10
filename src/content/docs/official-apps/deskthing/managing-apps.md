@@ -17,8 +17,6 @@ Official apps have been developed by RipRod or the ThingLabs team. Official apps
 
 3.) Select **Initialize App** to complete the process.
 
-![DeskThing_InitApp](/src/assets/docs/DeskThing_InitApp.png)
-
 4.) Navigate to the apps to see the list of downloaded apps. Some apps may display requests or have additional settings options. 
 
 ![DeskThing_Apps](/src/assets/docs/DeskThing_Apps.png)
@@ -40,8 +38,6 @@ Community apps can be installed using the following steps:
 ![DeskThing_UploadApp](/src/assets/docs/DeskThing_UploadApp.png)
 
 4.) Select **Initialize App** to complete the process.
-
-![DeskThing_InitApp](/src/assets/docs/DeskThing_InitApp.png)
 
 5.) Navigate to the apps to see the list of downloaded apps. Some apps may display requests or have additional settings options. 
 
@@ -73,7 +69,9 @@ To disable, stop, or delete an app from DeskThing Server, complete the following
 
 1.) Select the **Apps** tab and select the **Settings** button for the desired app.
 
-![DeskThing_AppSettings](/src/assets/docs/DeskThing_AppSettings.png)
+![DeskThing_AppSettings](/src/assets/docs/DesktThing_AppSettings.png)
+
+
 
 2.) Under the **Actions** tab, select the desired action.
 
@@ -87,7 +85,6 @@ To find the app version info, complete the following steps:
 
 ![DeskThing_AppSettings](/src/assets/docs/DeskThing_AppSettings.png)
 
-
-2.) Under the **Setting** tab, select the desired action.
+2.) Under the **Details** tab, select the desired action.
 
 ![DeskThing_Details](/src/assets/docs/DeskThing_AppDetails.png)
