@@ -30,12 +30,13 @@ Community apps can be installed using the **Upload App** button under the **Down
 ![DeskThing_UploadApp](/src/assets/docs/DeskThing_UploadApp.png)
 
 ## Managing Installed Apps
-
-### Modifying App Settings
-
-Select the **Apps** tab and select the **Settings** button.
+Select the **Apps** tab and select the **Settings** button to manage the installed apps. See the individual app sections for specific app details.
 
 ![DeskThing_AppSettings](/src/assets/docs/DeskThing_AppSettingsMenu.png)
+### Modifying App Settings
+The **Settings** tab display app settings.
+
+![DeskThing_AppSettings](/src/assets/docs/DeskThing_AppSettings.png)
 
 ### Disabling, Stopping, and Deleting Apps
 Definitions:
