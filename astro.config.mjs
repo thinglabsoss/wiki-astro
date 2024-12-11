@@ -71,7 +71,7 @@ export default defineConfig({
           items: [
             {
               label: 'FAQ',
-              autogenerate: { directory: 'Troubleshooting' },
+              slug: 'troubleshooting/faq',
             },
           ],
         },
