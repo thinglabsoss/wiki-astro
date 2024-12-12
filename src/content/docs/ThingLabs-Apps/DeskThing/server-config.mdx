@@ -1,25 +1,25 @@
 ---
-title: DeskThing Server
+title: Server Configuration
 ---
 
 import { Aside, Icon ,Tabs, TabItem } from '@astrojs/starlight/components';
+import { Image } from "astro:assets";
 
-The DeskThing desktop server application is your interface for managing DeskThing. This section describes how to install the app and configure its settings. 
+import DeskThing_Clients from "../../../../assets/docs/DeskThing_Clients.png";
+import Device_Settings from "../../../../assets/docs/Device_Settings.png";
+
+The DeskThing Server application is your interface for managing DeskThing and its clients. This section describes how to install the app and configure its settings. 
 
 DeskThing supports the following platforms:
 
-**Windows 10/11**
-
-**Linux x64/x86**
-
-**Mac with ARM Processors**
-
-**Mac with Intel Processors**
-
-**Linux ARM (Coming Soon)**
+- **Windows 10/11**
+- **Linux x64/x86**
+- **Linux ARM (Coming Soon)**
+- **Mac with ARM Processors**
+- **Mac with Intel Processors**
 
 ## Installation and Setup
-Complete the following steps to connect your Car Thing to the DeskThing Desktop server. Prefer video guides? See [DeskThing Youtube](https://www.youtube.com/@DeskThing)
+Complete the following steps to connect your Car Thing to the DeskThing Desktop server. Prefer video guides? See the [DeskThing Youtube Channel](https://www.youtube.com/@DeskThing).
 
 <Tabs syncKey="system">
   <TabItem label="Windows" icon='seti:windows'>
@@ -32,22 +32,23 @@ Complete the following steps to connect your Car Thing to the DeskThing Desktop 
 
 4.) Navigate to **Clients**.
 
-![DeskThing_Clients](/src/assets/docs/DeskThing_Clients.png)
+<Image src={DeskThing_Clients} alt="A reference image for navigating to the Clients tab"/>
 
 5.) No device may be found initially. Select **Refresh ADB** to refresh the device list.
 
-6.) On your device, a new setup process should appear. Select *Skip Setup" to use the default settings.
-Alternatively, proceed with the right arrow and select **Edit Config** to modify the configuration (More Description of config options coming soon). 
+6.) On your device, a new setup process should appear. Select **Skip Setup** to use the default settings.
+Alternatively, proceed with the right arrow and select **Edit Config** to modify the configuration. 
 
-7.) The device should now be connected!
+7.) The device should now be connected! You can confirm from the **Clients** tab.
 
+<Aside type='note'>Having problems? Open a support thread on the [DeskThing Discord](https://discord.gg/deskthing-1267348109067817051).</Aside>   
 ## Windows - Suggested Settings Changes
 
 1.) Navigate to **Settings** in the bottom left corner and select **Device**. 
 
 2.) Enable **Auto Detect ADB**, **Use Global ADB**, and **Auto Config**. This will ensure the device properly connects each time the Car Thing boots.
 
-![Device_Settings](/src/assets/docs/Device_Settings.png)
+<Image src={Device_Settings} alt="A reference image for the deskthing device settings"/>
   </TabItem>
     
   <TabItem label="Mac" icon='apple'>
@@ -59,14 +60,16 @@ Alternatively, proceed with the right arrow and select **Edit Config** to modify
 
 4.) Navigate to **Clients**.
 
-![DeskThing_Clients](/src/assets/docs/DeskThing_Clients.png)
+<Image src={DeskThing_Clients} alt="A reference image for navigating to the Clients tab"/>
 
 5.) No device may be found initially. Select **Refresh ADB** to refresh the device list.
 
 6.) On your device, a new setup process should appear. Select *Skip Setup" to use the default settings.
 Alternatively, proceed with the right arrow and select **Edit Config** to modify the configuration (More Description of config options coming soon).
 
-7.) The device should now be connected!
+7.) The device should now be connected! You can confirm from the **Clients** tab.
+
+<Aside type='note'>Having problems? Open a support thread on the [DeskThing Discord](https://discord.gg/deskthing-1267348109067817051).</Aside>   
 
 ## Mac - Suggested Settings Changes
 
@@ -75,7 +78,7 @@ Alternatively, proceed with the right arrow and select **Edit Config** to modify
 
 2.) Enable **Auto Detect ADB**, **Use Global ADB**, and **Auto Config**. This will ensure the device properly connects each time the Car Thing boots.
 
-![Device_Settings](/src/assets/docs/Device_Settings.png)
+<Image src={Device_Settings} alt="A reference image for the deskthing device settings"/>
   </TabItem>
 
   <TabItem label="Linux" icon='linux'>
@@ -87,14 +90,16 @@ Alternatively, proceed with the right arrow and select **Edit Config** to modify
 
 4.) Navigate to **Clients**.
 
-![DeskThing_Clients](/src/assets/docs/DeskThing_Clients.png)
+!<Image src={DeskThing_Clients} alt="A reference image for navigating to the Clients tab"/>
 
 5.) No device may be found initially. Select **Refresh ADB** to refresh the device list.
 
 6.) On your device, a new setup process should appear. Select *Skip Setup" to use the default settings.
 Alternatively, proceed with the right arrow and select **Edit Config** to modify the configuration (More Description of config options coming soon). 
 
-7.) The device should now be connected!
+7.) The device should now be connected! You can confirm from the **Clients** tab.
+
+<Aside type='note'>Having problems? Open a support thread on the [DeskThing Discord](https://discord.gg/deskthing-1267348109067817051).</Aside>   
 
 ## Linux - Suggested Settings Changes
 
@@ -103,6 +108,6 @@ Alternatively, proceed with the right arrow and select **Edit Config** to modify
 
 2.) Enable **Auto Detect ADB**, **Use Global ADB**, and **Auto Config**. This will ensure the device properly connects each time the Car Thing boots.
 
-![Device_Settings](/src/assets/docs/Device_Settings.png)      
+<Image src={Device_Settings} alt="A reference image for the deskthing device settings"/>    
   </TabItem>
 </Tabs>

@@ -2,15 +2,20 @@
 title: Introduction
 ---
 
-import { Aside,
-Icon ,Tabs, TabItem } from '@astrojs/starlight/components';
+import { Aside, Icon ,Tabs, TabItem } from '@astrojs/starlight/components';
+import { Image } from "astro:assets";
 
-![DeskThing_Photo](/src/assets/docs/DeskThing_Banner.jpg)
+import DeskThing_Banner from "../../../../assets/docs/DeskThing_Banner.jpg";
+import DeskThing_Photo from "../../../../assets/docs/DeskThing_Photo.jpg";
+
+<Image src={DeskThing_Banner} alt="The DeskThing Banner" loading="eager" />
 
 Credit for the photo: [Dammit Jeff](https://www.youtube.com/@DammitJeff)
-![DeskThing_Photo](/src/assets/docs/DeskThing_Photo.jpg)
+<Image src={DeskThing_Photo} alt="A nice B-role shot from Dammit Jeff" loading="eager" />
 
-DeskThing is an application that serves a control interface to a Car Thing, phone, or any other computing device. It also can load official and community-developed apps to allow control over local audio, monitor discord, or even keep an eye on the weather!
+DeskThing is an application that serves a control interface to a Car Thing, 
+phone, or any other computing device. It also can load official and community-developed 
+apps to allow control over local audio, monitor discord, or even keep an eye on the weather!
 
 
 ## Terminology
@@ -27,9 +32,9 @@ Follow through the following instructions in order to setup the Car Thing with D
 
 1.) [Flashing The Car Thing](/first-steps/flashing/).
 
-2.) [Setup DeskThing Server](/deskthing/deskthing-server).
+2.) [Setup DeskThing Server](/thinglabs-apps/deskthing/server-config).
 
-3.) [Install Apps](/deskthing/managing-apps).
+3.) [Install Apps](/thinglabs-apps/deskthing/managing-apps).
 
 ## Useful Links
 ### Documentation

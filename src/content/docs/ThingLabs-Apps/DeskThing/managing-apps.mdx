@@ -1,0 +1,66 @@
+---
+title: Managing Apps
+---
+import { Aside, Icon ,Tabs, TabItem } from '@astrojs/starlight/components';
+import { Image } from "astro:assets";
+
+import DeskThing_Downloads from "../../../../assets/docs/DeskThing_Downloads.png";
+import DeskThing_Apps from "../../../../assets/docs/DeskThing_Apps.png";
+import DeskThing_UploadApp from "../../../../assets/docs/DeskThing_UploadApp.png";
+import DeskThing_AppSettingsMenu from "../../../../assets/docs/DeskThing_AppSettingsMenu.png";
+import DeskThing_AppSettings from "../../../../assets/docs/DeskThing_AppSettings.png";
+import DeskThing_AppActions from "../../../../assets/docs/DeskThing_AppActions.png";
+import DeskThing_AppDetails from "../../../../assets/docs/DeskThing_AppDetails.png";
+
+DeskThing Server can load official or community apps to extend its functionality. This section explains how to install and manage DeskThing apps. See the individual app sections for specific app details.
+## Adding Apps
+Official apps have been developed by RipRod or the ThingLabs team. Official apps can be installed using the following steps:
+
+1.) Within DeskThing Server, proceed to the **Downloads** Tab.
+
+<Image src={DeskThing_Downloads} alt="Highlights how to navigate to the downloads tab"/>
+
+2.) Select the **Download Latest** button to download the app. A new window should appear requesting to initialize the app. Older versions of the apps can be found by selecting the "More Downloads" button.
+
+3.) A new popup window should appear. Select **Initialize App** to complete the install process.
+
+4.) Navigate to the apps to see the list of downloaded apps. Some apps may display requests or have additional settings options. 
+
+<Image src={DeskThing_Apps} alt="Highlights the Apps tab."/>
+
+### Community Apps
+
+Communitity apps are unofficial projects. Find the full list of recognized community apps at [deskthing.app/apps](https://deskthing.app/apps). They are created, maintained, and supported by members of the DeskThing community. Submit all issues to the respective GitHub pages.
+
+Community apps can be installed using the **Upload App** button under the **Downloads** tab.
+
+<Image src={DeskThing_UploadApp} alt="Highlights how to upload a community app."/>
+
+## Managing Installed Apps
+Select the **Apps** tab and select the **Settings** button to manage the installed apps. See the individual app sections for specific app details.
+
+<Image src={DeskThing_AppSettingsMenu} alt="Highlights how to access app settings menus."/>
+
+### Modifying App Settings
+The **Settings** tab display app settings.
+
+<Image src={DeskThing_AppSettings} alt="Shows an example of an apps settings options"/>
+
+### Disabling, Stopping, and Deleting Apps
+Definitions:
+
+**Purge** - Delete the app from DeskThing Server
+
+**Disable** - Stop the app until re-enabled, this is persistent.
+
+**Stop** - Stops the app until DeskThing Server is restarted.
+
+Under the **Actions** tab, select the desired action.
+
+<Image src={DeskThing_AppActions} alt="Shows an example of an apps action tab"/>
+
+### Locating App Version Info
+
+Find useful app info under the **Details** tab.
+
+<Image src={DeskThing_AppDetails} alt="Shows an example of an apps details tab"/>

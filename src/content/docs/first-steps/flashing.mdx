@@ -5,29 +5,35 @@ description: A guide on how to flash the Car Thing.
 
 import { Aside, Icon , Tabs, TabItem } from '@astrojs/starlight/components';
 
-This page provides step-by-step instructions for flashing the Spotify Car Thing with the ThingLabs OS using the Terbium webpage. A device running Linux or Mac can be used to flash the Car Thing, however Windows is the suggested platform.
+import { Image } from "astro:assets";
+import TerbiumHome from "../../../assets/docs/terbium-restore-local.png";
+import CarThing from "../../../assets/docs/CarThing.png";
 
-![terbium-restore-local](/src/assets/docs/terbium-restore-local.png)
+This page provides step-by-step instructions for flashing the Spotify Car Thing with the ThingLabs OS using the Terbium webpage. Prefer video guides? See the [DeskThing Youtube Channel](https://www.youtube.com/@DeskThing)
 
-  ### Flashing with Terbium
+<Image src={TerbiumHome} alt="The Terbium home screen" loading="eager" />
+
+<Tabs syncKey="system">
+  <TabItem label="Windows" icon='seti:windows'>
+  ### Flashing with Terbium on Windows
     Complete the following steps to flash the Car Thing.
     
-    1.) Navigate to [thingify.tools](https://thingify.tools/firmware/P3QZbZIDWnp5m_azQFQqP?tab=versions), select the right arrow for the latest release, and select the download button to download "version.number.here-thinglabs.zip".
+    1.) Navigate to [thingify.tools](https://thingify.tools/firmware/P3QZbZIDWnp5m_azQFQqP?tab=versions), select the right arrow for the latest release, and select the download button to download "x.x.x-thinglabs.zip".
    
     2.) Extract the zip into an accessible location.
    
-    3.) Navigate to [Terbium.app](https://terbium.app/)
+    3.) Navigate to [Terbium](https://terbium.app/).
 
     4.) Plug in a USB-C-to-C or USB-A-to-C cable into the Car Thing power supply USB-C port.
 
     5.) While holding top preset buttons 1 and 4, plug the USB into the computer. This will put the device into USB burn mode.
 
-        ![Carthing](/src/assets/docs/CarThing.png)
+        <Image src={CarThing} alt="Drawing of the Car Thing for visual reference"/>
 
         <Aside type='caution'>Ensure the USB port power supply and cable are capable of 
          passing data and providing ample power to the car thing.</Aside>
 
-    6.) Flashing the Car Thing from Windows requires special USB drivers. From Windows PowerShell, send the following command:
+    6.) Flashing the Car Thing from Windows USB drivers to be installed. From Windows PowerShell, send the following command:
     
     ```
     irm https://driver.terbium.app/get | iex
@@ -36,29 +42,125 @@ This page provides step-by-step instructions for flashing the Spotify Car Thing 
 
     7.) Select the **Done** button. 
 
-    8.) A new popup should appear with a device listed as "GX-CHIP". Ensure that an adblock is not stopping this popup. 
+    8.) A popup should appear in the browser with a device listed as "GX-CHIP".
 
     <Aside type='note'>If no device is identified make sure the Car Thing is in USB burn mode, see step 5.</Aside> 
 
     9.) Select the device, then **Connect**.
 
-    10.) The USB device will briefly reconnect. Select **Connect** again.
-    
-    11.) A popup should appear with the device now listed as "unknown device from Amlogic, Inc". Select the device, then **Connect**.
-    
-    <Aside type='caution'>If the system has been used to flash Car Thing previously using a legacy method
-    an "Access Denied" error may appear. To remove old drivers, open Windows Device Manager and look for either 
-    "GX-CHIP" or "WorldCup" Device in the list of devices. When found, right click, click **Uninstall device** and 
-    select **Attempt to remove the driver for this device**. Finally, click **Uninstall**. You may have to do this 
-    multiple times to ensure all previous drivers are removed. If the GX-CHIP device shows a warning symbol, install the driver 
-    again with the script in the previous section.</Aside>
+    <Aside type='caution'>If the system has been used to flash Car Thing previously using a legacy method,
+    an "Access Denied" error may appear. This is the result of incorrect drivers being installed. 
+    To remove old drivers, open Windows Device Manager and look for either 
+    "GX-CHIP" or "WorldCup" in the list of devices. If one of these devices is found, right click and select **Uninstall device**. 
+    Next, select **Attempt to remove the driver for this device**. Finally, select **Uninstall**. This may need to be performed multiple times 
+    to ensure all previous drivers are removed. If the GX-CHIP device shows a warning symbol, install the driver 
+    again with the command in the described in step 6.</Aside>
 
+    10.) T The USB device will briefly reconnect, putting the device into burn mode. Select **Connect** again.
+    
+    11.) A popup should appear in the browser with the device now listed as "unknown device from Amlogic, Inc". Select the device, then **Connect**.
+    
     12.) Once connected, select the button **Restore Local Folder**, navigate to the thingify.tools extracted zip directory, and select **Open**.
 
-    13.) A popup should appear requesting to let the site view the files, select **View files**.
+    13.) A popup should appear in the browser requesting access to view the directory. Give permission to the browser by selecting **View files**.
 
     14.) Select the **Select** button to start the flashing process.
 
     <Aside type='note'>Press **F12** on a keyboard to view the flashing logs. If
     an error occurs while attempting to flash, review the logs and provide them 
-    in a support thread on the DeskThing Discord.</Aside> 
+    in a support thread on the [ThingLabs_Discord](https://tl.mt/d).</Aside>
+
+        **Congratulations! Your Car Thing is now flashed and ready to use with a ThingLabs or Community app.** 
+    </TabItem>
+
+    <TabItem label="Mac" icon='apple'>
+    ### Flashing with Terbium on Mac
+    Complete the following steps to flash the Car Thing.
+
+    1.) Navigate to [thingify.tools](https://thingify.tools/firmware/P3QZbZIDWnp5m_azQFQqP?tab=versions), select the right arrow for the latest release, and select the download button to download "x.x.x-thinglabs.zip".
+   
+    2.) Extract the zip into an accessible location.
+   
+    3.) Navigate to [Terbium](https://terbium.app/).
+
+    4.) Plug in a USB-C-to-C or USB-A-to-C cable into the Car Thing power supply USB-C port.
+
+    5.) While holding top preset buttons 1 and 4, plug the USB into the computer. This will put the device into USB burn mode.
+
+        <Image src={CarThing} alt="Drawing of the Car Thing for visual reference"/>
+
+        <Aside type='caution'>Ensure the USB port power supply and cable are capable of 
+         passing data and providing ample power to the car thing.</Aside>
+
+    6.) Select the **Done** button. 
+
+    7.) A popup should appear in the browser with a device listed as "GX-CHIP".
+
+    <Aside type='note'>If no device is identified make sure the Car Thing is in USB burn mode, see step 5.</Aside> 
+
+    8.) Select the device, then **Connect**.
+
+    9.) The USB device will briefly reconnect, putting the device into burn mode. Select **Connect** again.
+    
+    10.) A popup should appear in the browser with the device now listed as "unknown device from Amlogic, Inc". Select the device, then **Connect**.
+    
+    11.) Once connected, select the button **Restore Local Folder**, navigate to the thingify.tools extracted zip directory, and select **Open**.
+
+    12.) A popup should appear in the browser requesting access to view the directory. Give permission to the browser by selecting **View files**.
+
+    13.) Select the **Select** button to start the flashing process.
+
+    <Aside type='note'>Press **F12** on a keyboard to view the flashing logs. If
+    an error occurs while attempting to flash, review the logs and provide them 
+    in a support thread on the [ThingLabs_Discord](https://tl.mt/d).</Aside>
+
+    **Congratulations! Your Car Thing is now flashed and ready to use with a ThingLabs or Community app.**   
+  </TabItem>
+
+  <TabItem label="Linux" icon='linux'>
+    ### Flashing with Terbium on Linux
+    Complete the following steps to flash the Car Thing.
+
+    1.) Navigate to [thingify.tools](https://thingify.tools/firmware/P3QZbZIDWnp5m_azQFQqP?tab=versions), select the right arrow for the latest release, and select the download button to download "x.x.x-thinglabs.zip".
+   
+    2.) Extract the zip into an accessible location.
+   
+    3.) Navigate to [Terbium](https://terbium.app/).
+
+    4.) Plug in a USB-C-to-C or USB-A-to-C cable into the Car Thing power supply USB-C port.
+
+    5.) While holding top preset buttons 1 and 4, plug the USB into the computer. This will put the device into USB burn mode.
+
+        <Image src={CarThing} alt="Drawing of the Car Thing for visual reference"/>
+
+        <Aside type='caution'>Ensure the USB port power supply and cable are capable of 
+         passing data and providing ample power to the car thing.</Aside>
+
+    6.) Select the **Done** button. 
+
+    7.) A popup should appear in the browser with a device listed as "GX-CHIP".
+
+    <Aside type='note'>If no device is identified make sure the Car Thing is in USB burn mode, see step 5.</Aside> 
+
+    8.) Select the device, then **Connect**. you may need to setup udev rules to allow access to the Car Thing. Open a terminal and run the following command:
+
+    <Aside type='caution'>It may be necessary to setup udev rules to allow access to the Car Thing. 
+    Open a terminal and run the following command: ```curl -fsSL https://terbium.app/install-rules | bash```</Aside>
+
+    9.) The USB device will briefly reconnect, putting the device into burn mode. Select **Connect** again.
+    
+    10.) A popup should appear in the browser with the device now listed as "unknown device from Amlogic, Inc". Select the device, then **Connect**.
+    
+    11.) Once connected, select the button **Restore Local Folder**, navigate to the thingify.tools extracted zip directory, and select **Open**.
+
+    12.) A popup should appear in the browser requesting access to view the directory. Give permission to the browser by selecting **View files**.
+
+    13.) Select the **Select** button to start the flashing process.
+
+    <Aside type='note'>Press **F12** on a keyboard to view the flashing logs. If
+    an error occurs while attempting to flash, review the logs and provide them 
+    in a support thread on the [ThingLabs_Discord](https://tl.mt/d).</Aside>  
+    
+    **Congratulations! Your Car Thing is now flashed and ready to use with a ThingLabs or Community app.**
+  </TabItem>
+</Tabs>

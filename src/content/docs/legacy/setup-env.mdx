@@ -3,11 +3,15 @@ title: Setting up your system
 description: How to setup your system.
 ---
 
-import { Aside,
-Icon ,Tabs, TabItem } from '@astrojs/starlight/components';
+import { Aside, Icon ,Tabs, TabItem } from '@astrojs/starlight/components';
+import { Image } from "astro:assets";
 
+import Carthing from "../../../assets/docs/CarThing.png";
+import zadig_ignore from "../../../assets/docs/zadig_ignore.png";
+import zadig_libusbk from "../../../assets/docs/zadig_libusbk.png";
+import device_manager from "../../../assets/docs/device-manager.png";
 
-This page provides step-by-step instructions to set up your system for flashing your Car Thing, from tool preparation to software configuration for a successful flashing process.
+This page provides step-by-step instructions to set up your system for flashing your Car Thing using a legacy flashing method, from tool preparation to software configuration for a successful flashing process.
 
 ## Installing Prerequisite Programs
 Flashing the CarThing requires additional programs and drivers.
@@ -68,7 +72,7 @@ To connect to the Car Thing, it is necessary to install specific drivers that ar
 
     2.) While holding top preset buttons 1 and 4, plug the USB into the computer. This will put the device into USB burning mode.
 
-        ![Carthing](/src/assets/docs/CarThing.png)
+        <Image src={Carthing} alt="Drawing of the Car Thing for visual reference" />
 
         <Aside type='caution'>Ensure your USB power supply and cable are capable of 
          passing data and providing ample power to the car thing.</Aside>
@@ -77,7 +81,7 @@ To connect to the Car Thing, it is necessary to install specific drivers that ar
    
     4.) After the driver is installed select options, then “list all devices”.
 
-    ![zadix_options](/src/assets/docs/zadix_ignore.png)
+    <Image src={zadig_ignore} alt="A reference image of the zadig options."/>
 
     5.) Within the drop-down change the select “GX-CHIP”. Select the "Edit" checkbox and replace the name with "WorldCup Device".
 
@@ -87,14 +91,14 @@ To connect to the Car Thing, it is necessary to install specific drivers that ar
     
     7.) Select "Replace Driver" and wait for it to finish. This can take several minutes.
 
-    ![zadix_libusbk](/src/assets/docs/zadix_libusbk.png)
+    <Image src={zadig_libusbk} alt="A reference image of the zadig usb drivers."/>
 
     <Aside type='note'>If this driver does not work, try using the WinUSB driver instead.</Aside>
 
     To verify the driver has changed successfully, navigate to the windows device manager. You should find a drop down titled "libuse-win32 devices" and a device named "WorldCup Device"
 
-    ![device_manager](/src/assets/docs/device-manager.png)
-
+    <Image src={device_manager} alt="A reference image of the device manager device."/>
+    
     <Aside type='note'>Still having problems? Try uninstalling the driver within Device Manager and then power cycling the car thing.</Aside>
   </TabItem>
     

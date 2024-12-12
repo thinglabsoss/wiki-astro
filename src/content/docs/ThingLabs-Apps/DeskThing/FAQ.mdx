@@ -3,6 +3,13 @@ title: Frequently Asked Questions
 ---
 
 import { Aside, Icon ,Tabs, TabItem } from '@astrojs/starlight/components';
+import { Image } from "astro:assets";
+
+import DeskThing_Device_Details from "../../../../assets/docs/DeskThing_Device_Details.png";
+import DeskThing_Supervisor_Pause_Backlight from "../../../../assets/docs/DeskThing_Supervisor_Pause_Backlight.png";
+import DeskThing_Device_Brightness from "../../../../assets/docs/DeskThing_Device_Brightness.png";
+import DeskThing_Clients from "../../../../assets/docs/DeskThing_Clients.png";
+import DeskThing_QR from "../../../../assets/docs/DeskThing_QR.png";
 
 This page is full of commonly asked questions about DeskThing.
 
@@ -22,9 +29,9 @@ Take a look at the [Spotify App](/official-apps/deskthing/apps/spotify/) section
 4.) Select the play button "Run FireWall Configuration"
 
     <Aside type='note'>If it says it failed to verify Firewall. That is OK, continue with the process.</Aside>
-5.) Exit the "Settings" window and "Device Details" under the "Clients" tab.
+5.) 5.) Exit the "Settings" window and select "Device Details" under the "Clients > Connections" tab.
 
-![DeskThing_Device_Details](/src/assets/docs/DeskThing_Device_Details.png)
+<Image src={DeskThing_Device_Details} alt="A reference image of the device details."/>
 
 6.) Select the "Push Staged" button.
 
@@ -32,15 +39,15 @@ Take a look at the [Spotify App](/official-apps/deskthing/apps/spotify/) section
     
     1.) Under the "Clients" tab, select "Device Details".
 
-    ![DeskThing_Device_Details](/src/assets/docs/DeskThing_Device_Details.png)
+    <Image src={DeskThing_Device_Details} alt="A reference image navigating to device details."/>
 
     2.) Scroll down, locate "backlight: RUNNING", and select the pause icon.
 
-    ![DeskThing_Supervisor_Status](/src/assets/docs/DeskThing_Supervisor_Pause_Backlight.png)
+    <Image src={DeskThing_Supervisor_Pause_Backlight} alt="A reference image of the pausing the backlight service."/>
 
     3.) Using the slidebar labeled "brightness", move the slider left or right to change the car thing display brightneses.
 
-    ![DeskThing_Supervisor_Status](/src/assets/docs/DeskThing_Device_Brightness.png)
+    <Image src={DeskThing_Device_Brightness} alt="A reference image of the device details."/>
 
     <Aside type='note'>The backlight process starts whenever the device powers on. The backlight process must be manually stopped every time the car thing is power cycled.</Aside>
 ### How do I use DeskThing on my phone?
@@ -53,11 +60,11 @@ Take a look at the [Spotify App](/official-apps/deskthing/apps/spotify/) section
 
     4.) Navigate to "Clients".
 
-    ![DeskThing_Clients](/src/assets/docs/DeskThing_Clients.png)
+    <Image src={DeskThing_Clients} alt="A reference image of the deskthing clients."/>
 
     5.) Select "QR Code" and scan the QR Code with your phone.
 
-![DeskThing_Clients](/src/assets/docs/DeskThing_QR.png)
+    <Image src={DeskThing_QR} alt="A reference image of the deskthing client QR code."/>
 ## Known Issues
 
 ### AMD 5000 series cards
