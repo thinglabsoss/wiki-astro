@@ -75,6 +75,15 @@ export default defineConfig({
             },
           ],
         },
+        {
+          label: 'Troubleshooting',
+          items: [
+            {
+              label: 'FAQ',
+              slug: 'troubleshooting/faq',
+            },
+          ],
+        },
       ],
     }),
     tailwind({
