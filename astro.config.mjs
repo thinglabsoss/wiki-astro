@@ -23,33 +23,67 @@ export default defineConfig({
           label: 'First Steps',
           items: [
             {
-              label: 'Setting up',
-              slug: 'first-steps/setup-env',
-            },
-            {
-              label: 'Flashing your Car Thing',
+              label: 'Flashing The Car Thing',
               slug: 'first-steps/flashing',
             },
           ],
         },
-        // {
-        //   label: 'CarThing Customization',
-        //   autogenerate: {
-        //     directory: 'carthing-customization',
-        //   },
-        // },
-        // {
-        //   label: 'Official Apps',
-        //   autogenerate: {
-        //     directory: 'official-apps',
-        //   },
-        // },
-        // {
-        //   label: 'Community Apps',
-        //   autogenerate: {
-        //     directory: 'community-apps',
-        //   },
-        // },
+        {
+          label: 'ThingLabs Apps',
+          items: [
+            {
+              label: 'DeskThing',
+              items: [
+                {
+                  label: 'Introduction',
+                  slug: 'thinglabs-apps/deskthing/introduction',
+                },
+                {
+                  label: 'Server Configuration',
+                  slug: 'thinglabs-apps/deskthing/server-config',
+                },
+                {
+                  label: 'Managing Apps',
+                  slug: 'thinglabs-apps/deskthing/managing-apps',
+                },
+                {
+                  label: 'FAQ',
+                  slug: 'thinglabs-apps/deskthing/faq',
+                },
+                {
+                  label: 'Official Apps',
+                  autogenerate: { directory: '/ThingLabs-Apps/DeskThing/Apps' },
+                },
+              ]
+            },
+          ],
+        },
+        {
+          label: 'Legacy Documentation',
+          items: [
+            {
+              label: 'Setting Up',
+              slug: 'legacy/setup-env',
+            },
+            {
+              label: 'Flashing',
+              slug: 'legacy/alternative-flashing',
+            },
+            {
+              label: 'ADB Tools',
+              slug: 'legacy/adb',
+            },
+          ],
+        },
+        {
+          label: 'Troubleshooting',
+          items: [
+            {
+              label: 'FAQ',
+              slug: 'troubleshooting/faq',
+            },
+          ],
+        },
       ],
     }),
     tailwind({

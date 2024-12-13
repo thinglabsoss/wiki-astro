@@ -1,0 +1,58 @@
+---
+title: ADB
+description: How to use the ADB Tools
+---
+
+import { Aside, Icon ,Tabs, TabItem, Image } from '@astrojs/starlight/components';
+
+
+## Android Debug Bridge (ADB)
+Download and setup ADB to allow communications between a PC and the Car Thing.
+<Tabs syncKey="system">
+  <TabItem label="Windows" icon='seti:windows'>
+    Complete the following steps to flash the Car Thing.
+    
+    1.) Navigate to [android SDK Platform Tools](https://developer.android.com/tools/releases/platform-tools).
+   
+    2.) Scroll to the **Downloads** section and select **Download SDK Platform-Tools for Windows** and accept the terms and conditions.
+
+    3.) Extract the the file "platform-tools-latest-windows.zip" and navigate to "..\platform-tools-latest-windows\platform-tools\adb.exe"
+
+    4.) Within Windows, navigate to "Edit the system environment variables".
+
+    5.) Under **System Properties** within the **Advanced** tab, select **Environment Variables**.
+
+    6.) Under the  **System Variables** window locate the variable **Path** and select **Edit**.
+
+    7.) On the right-hand side of the window **Edit environment variables** select **New** and a new row will be highlighted.
+
+    8.) Enter the file path of the folder **platform-tools**.
+
+    <Aside type='note'>The file path can easily be obtained by holding the shift key, right-clicking the folder, and selecting, **copy as path**.</Aside>
+
+    9.) Select **ok** to save the path.
+
+    10.) Verify that the tool is working properly by opening Windows PowerShell and entering "adb devices". A device should now be listed.
+
+    <Aside type='caution'>A known issue has been identified regarding compatibility with the adb tool and AMD 5000 series CPUs. AMD has been notified and possibly working on a fix. If you run into this issue, try updating the pc BIOS.</Aside>
+
+  </TabItem>
+    
+  <TabItem label="Mac" icon='apple'>
+    1.) Navigate to [android SDK Platform Tools](https://developer.android.com/tools/releases/platform-tools).
+   
+    2.) Scroll to the **Downloads** section and select **Download SDK Platform-Tools for Mac** and accept the terms and conditions.
+    
+    ...Additional Steps Coming Soon :(
+  </TabItem>
+
+  <TabItem label="Linux" icon='linux'>
+    1.) Navigate to [android SDK Platform Tools](https://developer.android.com/tools/releases/platform-tools).
+   
+    2.) Scroll to the **Downloads** section and select **Download SDK Platform-Tools for Linux** and accept the terms and conditions.
+
+    ...Additional Steps Coming Soon :(
+  </TabItem>
+</Tabs>
+
+

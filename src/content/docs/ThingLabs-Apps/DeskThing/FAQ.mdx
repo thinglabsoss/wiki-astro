@@ -1,0 +1,89 @@
+---
+title: Frequently Asked Questions
+---
+
+import { Aside, Icon ,Tabs, TabItem } from '@astrojs/starlight/components';
+import { Image } from "astro:assets";
+
+import DeskThing_Device_Details from "../../../../assets/docs/DeskThing_Device_Details.png";
+import DeskThing_Supervisor_Pause_Backlight from "../../../../assets/docs/DeskThing_Supervisor_Pause_Backlight.png";
+import DeskThing_Device_Brightness from "../../../../assets/docs/DeskThing_Device_Brightness.png";
+import DeskThing_Clients from "../../../../assets/docs/DeskThing_Clients.png";
+import DeskThing_QR from "../../../../assets/docs/DeskThing_QR.png";
+
+This page is full of commonly asked questions about DeskThing.
+
+## Q/A
+### How do I setup Spotify?
+
+Take a look at the [Spotify App](/thinglabs-apps/deskthing/apps/spotify/) section.
+
+### How do I enable RNDIS?
+
+1.) Navigate to "Settings" and select the "Client" tab.
+
+2.) Enable "Use RNDIS".
+
+3.) Navigate to the "Device" tab.
+
+4.) Select the play button "Run FireWall Configuration"
+
+    <Aside type='note'>If it says it failed to verify Firewall. That is OK, continue with the process.</Aside>
+5.) 5.) Exit the "Settings" window and select "Device Details" under the "Clients > Connections" tab.
+
+<Image src={DeskThing_Device_Details} alt="A reference image of the device details."/>
+
+6.) Select the "Push Staged" button.
+
+### How do I change the Car Things backlight brightness?
+    
+    1.) Under the "Clients" tab, select "Device Details".
+
+    <Image src={DeskThing_Device_Details} alt="A reference image navigating to device details."/>
+
+    2.) Scroll down, locate "backlight: RUNNING", and select the pause icon.
+
+    <Image src={DeskThing_Supervisor_Pause_Backlight} alt="A reference image of the pausing the backlight service."/>
+
+    3.) Using the slidebar labeled "brightness", move the slider left or right to change the car thing display brightneses.
+
+    <Image src={DeskThing_Device_Brightness} alt="A reference image of the device details."/>
+
+    <Aside type='note'>The backlight process starts whenever the device powers on. The backlight process must be manually stopped every time the car thing is power cycled.</Aside>
+### How do I use DeskThing on my phone?
+
+    1.) Download the DeskThing desktop server installer from [DeskThing.App/Releases](https://deskthing.app/releases).
+
+    2.) Run deskthing-win-x.x.x-setup.exe.
+
+    3.) After running, the app should open.
+
+    4.) Navigate to "Clients".
+
+    <Image src={DeskThing_Clients} alt="A reference image of the deskthing clients."/>
+
+    5.) Select "QR Code" and scan the QR Code with your phone.
+
+    <Image src={DeskThing_QR} alt="A reference image of the deskthing client QR code."/>
+## Known Issues
+
+### App Local Not Found (is it running?)
+
+Please remove the utility app. 
+
+We don't like that app around these parts. The functionality was integrated into the base app in v0.9.0.
+
+### Car Thing connects successfully but cannot play audio.
+
+Navigate to settings (bottom left), set a playback location under the **Music** tab, and select save.
+
+
+### **Getting Audio Data** / **Waiting For Song**
+
+Make sure you have audio playing and hit **Play** or **Skip**
+    
+
+
+
+
+
