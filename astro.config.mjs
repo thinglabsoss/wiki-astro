@@ -5,13 +5,16 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://thinglabs.tech',
+  site: 'https://carthing.wiki',
   integrations: [
     starlight({
-      title: 'ThingLabs',
+      title: 'Thing Labs Wiki',
       logo: {
         src: './src/assets/thinglabs-logo.svg',
         replacesTitle: true,
+      },
+      components: {
+        Head: './src/components/Head.astro',
       },
       customCss: ['./src/tailwind.css'],
       social: {
