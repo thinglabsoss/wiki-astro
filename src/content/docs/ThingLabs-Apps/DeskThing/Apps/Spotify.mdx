@@ -32,13 +32,14 @@ For the Spotify DeskThing app to receive realtime updates about your Spotify pla
 
 3.) Enter an app name and description. This can be anything.
 
-4.) In the Redirect URI's entry box, enter "http://localhost:8888/callback/spotify" and hit **add**.
+4.) In the Redirect URI's entry box, enter "deskthing://a?app=spotify" and hit **add**.
 
 5.) Check the box for the Spotify developer agreement policy.
 
 6.) Select **Save**.
 
 <Image src={Spotify_Dev_App} alt="An example of creating spotify developer app" />
+*note: The redirect URL is wrong in this image. It should be "deskthing://a?app=spotify" due to recent spotify API changes.*
 
 7.) Once created, click on the app and then settings.
 
@@ -63,6 +64,7 @@ and select the submit check button in the bottom right corner. Leave the **Redir
 you have reason to change it. After submitting, a new window should open in your web browser with a success message.
 
 <Image src={Spotify_Request} alt="An example of the DeskThing Spotify app request" />
+*Note: the redirect url should be "deskthing://a?app=spotify" instead of localhost due to recent spotify API changes*
 
 6.) Navigate to **Settings**.
 
