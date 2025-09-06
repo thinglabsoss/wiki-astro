@@ -1,3 +1,30 @@
+This is the ThingLabs Wiki Page - running on Starlight 
+
+It is the collection of *almost* everything we have learned over the years of hacking the car thing. From setting it up, flashing, to uses. 
+
+The domain situation is a bit.. odd.. but here are a few options to try:
+
+https://carthing.wiki
+https://thinglabsoss.github.io/wiki-astro/
+https://wiki-astro.pages.dev
+https://wiki.thinglabs.tech
+
+Typical dev of doing, yknow, "npm install" and "npm run dev" to setup the development server as well in case all else fails. 
+
+I don't get paid enough to formally make a README with proper styling so here is the brief:
+
+- Changes should be made to branches to then get merged into the main page
+- Please be clear about *what* you are changing / fixing / updating
+- If else fails, you may have to contact us at https://tl.mt/d (the discord) and ping one of the admins and see if they respond
+
+
+Thank you, and have a nice day. I appreciate you stopping by!
+
+
+
+
+# *Basic Starlight boilerplate stuff below*
+
 # Starlight Starter Kit: Basics
 
 [![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
