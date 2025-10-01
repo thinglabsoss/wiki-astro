@@ -3,8 +3,8 @@ import starlightPlugin from '@astrojs/starlight-tailwind';
 /** @type {import('tailwindcss').Config} */
 
 const accent = {
-  200: '#b2caed',
-  600: '#2069c8',
+  200: '#86c0d1',
+  600: '#4dc1ae',
   900: '#14325b',
   950: '#12243e',
 };
