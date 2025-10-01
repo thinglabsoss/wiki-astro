@@ -5,7 +5,11 @@ template: splash
 hero:
   tagline: Re-invent your "Thing".
   image:
-    file: ../../assets/carthing.webp
+    html: '
+		<Image src="carthing_s.webp" alt="" class="mockup-desktop" style="width: 550px; margin-left: 2.5rem;">
+		<Image src="carthing_s.webp" alt="" class="mockup-tablet" style="width: 400px;">
+		<Image src="carthing.webp" alt="" class="mockup-mobile" style="margin-inline: auto; width: min(100%,20rem);">
+	'
   actions:
     - text: Get Started
       link: /first-steps/flashing/
