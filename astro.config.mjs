@@ -10,7 +10,8 @@ export default defineConfig({
     starlight({
       title: 'Thing Labs Wiki',
       logo: {
-        src: './src/assets/thinglabs-logo.svg',
+        light: './src/assets/thinglabs-logo-light.svg',
+        dark: './src/assets/thinglabs-logo-dark.svg',
         replacesTitle: true,
       },
       components: {
